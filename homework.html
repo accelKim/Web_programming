@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <header>웹 프로그래밍</header>
+    <div id="te">
+        <p id="title"> 이번학기 학습 내용</p>
+        <p id="list">
+            <div id="contents">
+                <div id="table-of-contents">
+                  <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                  </ul>
+                </div>
+              </div>
+        </p>
+        <div id="main">
+            <div id="content">
+                <div id="html" class="content-item">
+                  <!-- HTML 내용 -->
+                  <p> 조금 덜 어렵다</p>
+                </div>
+                <div id="css" class="content-item">
+                  <!-- CSS 내용 -->
+                  <p>조금 어렵다</p>
+                </div>
+                <div id="javascript" class="content-item">
+                  <!-- JavaScript 내용 -->
+                  <p>모르겄다.</p>
+                </div>
+              </div>
+        </div>
+        <div id="bottom"></div>
+        <div id="line"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#table-of-contents ul li a").click(function(event) {
+        event.preventDefault(); // 링크의 기본 동작을 막습니다.
+        var contentId = $(this).attr("href").substring(1); // 클릭한 목차 항목의 ID 추출
+        $(".content-item").hide(); // 모든 내용 숨김
+        $("#" + contentId).show(); // 해당 내용 표시
+      });
+    });
+    </script>
+</body>
+</html>

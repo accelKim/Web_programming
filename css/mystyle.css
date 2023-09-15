@@ -1,5 +1,6 @@
 div > .main{
     background-color: linen;
+    
 }
 body.main{
     background-color: rgb(171, 190, 190);
@@ -7,20 +8,85 @@ body.main{
 div strong {
     color: aqua;
 }
-ol,ul {
-    color: green;
-    border: 0.5px solid;
-    border-color: blue ;
-}
-li:hover {
-    background-color: yellowgreen;
-}
-tr:hover {
+
+table{
+    border: 1px solid blue;
+    }
+    th,td {
+        border: 1px dotted purple;
+    }
+header{
     background-color: linen;
+    border: 3px solid blue;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    
 }
-tr:nth-child(odd) {
-    background-color: gray;
+
+#te{
+    border: 3px solid blue;
+    height: 600px;
 }
-tr:nth-child(even) {
-    background-color: white;
+#title{
+    background-color: linen;
+    position: relative;
+    bottom: 30px;
+    border: 3px solid blue;
+    height: 100px;
+    width: 800px;
+    margin: 50px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 3;
 }
+#list{
+    position: relative;
+    left: 50px;
+    border: 3px solid blue;
+    width: 200px;
+    height: 350px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 3;
+    
+}
+#main{
+    position: relative;
+    left: 300px;
+    bottom: 460px;
+    border: 3px solid blue;
+    background-color: linen;
+    height: 350px;
+    width: 570px;
+    text-align: center;
+    line-height: 16;
+    font-size: 20px;
+}
+
+#bottom{
+    position: relative;
+    bottom: 880px;
+    border-bottom: 3px orangered solid;
+}
+ #line{
+    position: relative;
+    left: 280px;
+    bottom: 880px;
+    border-bottom: 460px solid orangered;
+    width: 3px;
+    
+ }
+ .content-item {
+    display: none; /* 초기에는 내용을 숨깁니다. */
+  }
+  
+  #table-of-contents ul li {
+    position: relative;
+    bottom: 200px;
+    left: 60px;
+    cursor: pointer; /* 항목에 포인터 커서를 설정합니다. */
+    text-decoration: underline; /* 클릭 가능한 항목임을 강조합니다. */
+  }
+
+
