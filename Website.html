@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/structure.css">
+    <style>
+         .menu-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Dream Jeju
+        <li><a href="#" class="menu-button" data-target="menu-1">단체여행</a></li>
+        <li><a href="#" class="menu-button" data-target="menu-2">맞추여행</a></li>
+        <li><a href="#" class="menu-button" data-target="menu-3">갤러리</a></li>
+        <li><a href="#" class="menu-button" data-target="menu-4">문의하기</a></li>
+    </header>
+    <div id="menu-1" class="menu-content">
+        <!-- 메뉴 1의 내용 -->
+        <ul>
+            제주도 단체여행 패키지
+            <p><img src="image/다운로드 (2).jfif" class="imagetext"></p>
+            <p id="t1">예약 페이지 바로가기 <br>
+                <a href="https://m.hanatourjeju.com/">하나투어제주</a>
+            </p>
+            
+        </ul>
+    </div>
+
+    <div id="menu-2" class="menu-content">
+        <!-- 메뉴 2의 내용 -->
+       <ul>
+        제주도 맞춤여행 패키지
+        <p>
+            <img src="image/다운로드 (3).jfif" class="imagetext">
+        </p>
+        <p id="t1">예약 페이지 바로가기 <br>
+            <a href="https://www2.webtour.com/GEvent/ev_detail.asp?eIdx=4717&utm_source=G_SA&gad=1&gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCHQa_7o6U8aq5kgbE2hL_Fma_yVbi6ExP1stOT8Ylvj38o3PJ6j_gaAutJEALw_wcB">웹 투어 예약 페이지 바로가기</a>
+        </p>
+
+       </ul>
+    </div>
+
+    <div id="menu-3" class="menu-content">
+        <!-- 메뉴 3의 내용 -->
+       
+    </div>
+
+    <div id="menu-4" class="menu-content">
+        <!-- 메뉴 3의 내용 -->
+        <p>메뉴 4의 내용을 여기에 넣으세요.</p>
+    </div>
+    
+
+    <!-- 초기에는 홈 화면을 보여줌 -->
+    <div id="home" class="menu-content" style="display: block;">
+     <ul>
+         몸과 마음이 치유되는 섬
+        <p><img src="image/다운로드.jfif" class="imagetext"></p>
+        <p id="t1">제주는 매력이 무궁무진한 대한민국의 섬입니다. <br> 온화한 기후와, 잘 보존된 자연경관들, 아름다운 모래해변과 로맨틱한 일출과 일몰까지.<br> 하나하나 나열하기도 힘들 정도로 완벽한 여행지입니다.<br> 액티비티 한 활동을 좋아한다면 한라산 트래킹부터 카페 투어까지모든 활동이<br> 가능한 제주를 지금 즉시 방문해보세요! </p>
+       
+    </ul>
+    <br><br><br><br><br><br>
+    <ul>
+        다앙햔 액티비티가 기다리는 섬
+        <p><img src="image/다운로드 (1).jfif" class="imagetext"></p>
+        <p id="t1">수영을 못 해도, 자격증 없어도 다이빙으로 바닷속 우주를 탐험할 수 있다.<br> 바다뿐 아니라 아쿠아플라넷 대형수조 안에 들어가는 프로그램도 있다.<br> 스킨스쿠버 전문 교육센터로, PADI 오픈워터 및 어드밴스 자격증 2일 코스도 운영하니,<br> 전문적으로 스쿠버다이빙을 배우고 싶은 사람에게도 인기다.</p>
+    </ul>
+    </div>
+
+    <footer id="bottomMenu">
+ <ul>
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">개인정보취급방침</a></li>
+    <li><a href="#">이용약관</a></li>
+    <li><a href="#">사이트맵</a></li>
+ </ul>
+   </footer>
+
+    <script>
+        // 메뉴 버튼을 클릭할 때 메뉴 내용을 토글하고 다른 토글을 닫습니다.
+        const menuButtons = document.querySelectorAll('.menu-button');
+        const homeButton = document.getElementById('home-button');
+        const homeContent = document.getElementById('home');
+
+        menuButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement.style.display === 'block') {
+                    // 클릭한 메뉴가 이미 열려 있는 경우, 홈 화면으로 돌아갑니다.
+                    targetElement.style.display = 'none';
+                    homeContent.style.display = 'block';
+                } else {
+                    // 다른 메뉴가 열려 있는 경우, 현재 메뉴만 엽니다.
+                    const allMenuContents = document.querySelectorAll('.menu-content');
+                    allMenuContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    targetElement.style.display = 'block';
+                    homeContent.style.display = 'none';
+                }
+            });
+        });
+
+        // 홈 화면으로 돌아가는 버튼
+        homeButton.addEventListener('click', () => {
+            const allMenuContents = document.querySelectorAll('.menu-content');
+            allMenuContents.forEach(content => {
+                content.style.display = 'none';
+            });
+            homeContent.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

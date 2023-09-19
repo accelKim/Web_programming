@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            /* width: 700px; */
+            background-color: white;
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows:minmax(50px, auto);
+            grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+        }
+        .items:nth-child(odd){
+            background-color: grey;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+        </div>
+        <div class="items">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="items">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div class="items">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="items">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            </div>
+    </div>
+</body>
+</html>

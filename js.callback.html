@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callTenTimes(callback) {
+            for(var i = 0; i < 10; i++)
+                callback();
+            
+        }
+    </script>
+</head>
+<body>
+    <h3>콜백 함수 예제</h3>
+    <hr>
+    <script>
+        callTenTimes(() => document.write("콜백함수호출 <br>"));
+    </script>
+</body>
+</html>

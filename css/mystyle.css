@@ -3,18 +3,13 @@ div > .main{
     
 }
 body.main{
-    background-color: rgb(171, 190, 190);
+    background-color: whitesmoke;
 }
 div strong {
     color: aqua;
 }
 
-table{
-    border: 1px solid blue;
-    }
-    th,td {
-        border: 1px dotted purple;
-    }
+
 header{
     background-color: linen;
     border: 3px solid blue;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h3>while 문으로 1~입력받은 수까지 더하기</h3>
+    <script>
+            var num;
+            if(num == null) {
+                document.write("입력값이 없습니다.");
+            }
+           else{ 
+            num = parseInt(input);
+            if(num == NaN){
+                document.write("입력값이 숫자가 아닙니다");
+            }
+            }
+            n = prompt(0); 
+            var i =0, sum = 0;
+            while(i <= num) {
+                sum += i;
+            }
+            document.write("1에서" + num + "까지 더한 수는 " + sum + "입니다");
+        
+        for(var i = 10; i<=35; i = i + 5){
+            document.write("<span style = 'font-size :" + i + "px'>");
+            document.write(i + "px")
+            document.write("</span>")    
+        }
+    </script>
+</body>
+</html>

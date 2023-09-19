@@ -25,7 +25,24 @@ ul {
 header{
   width:100%;    /*  너비 */
   height:100px;   /* 높이 */ 
-  background-color:rgb(61, 120, 134);  
+  background-color:rgb(26, 32, 119);  
+  color: white;
+  font-size: 50px;
+}
+header li{
+  position: relative;
+  top: 30px;
+  font-size: 20px;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0px 30px;
+ 
+}
+header li a{
+  color: white;
+}
+header li a:hover{
+  color: purple;
 }
 
 /* 로고 */
@@ -61,61 +78,51 @@ nav{
 #topMenu > li > a{
   display:block;  /* 링크 텍스트는 블록으로 */ 
   font-size:1.1em;
-  color:#fff;  /* 글자 색 */
+  color:#ffffff;  /* 글자 색 */
   font-weight:600;  /* 글자 굵기 */
   padding:20px 60px;  /* 패딩 */ 
 }
 #topMenu > li > a:hover {
-  color:#1fa8f8;
+  color:#ffffff;
   text-shadow:0 -2px #222;
 }
 
 
 /* 본문 */
 
-.contents {
-  width:1000px;
-  margin:50px auto;  
-}
-main > section {
-  margin-top:60px;  
-}
-main h2 {    
-  font-size:1.5em;
-  line-height: 2.5;
-}
-main div {
-  margin-top:20px;
-}
-main h3 {
-  font-size:1.2em;
-  line-height:2.2;
-}
-.detail p {
-  line-height: 2.0;
-  color:#222;
-}
-.detail > img {
-  float:left; 
-  margin-right:50px;
-  border-radius:20px;
-}
-.schedule h4 {
-  font-size:1.2em;
-}
-.schedule ul {
-  list-style: none;
-}
-.schedule ul li { 
-  line-height: 2;
+div{
+ position: relative;
+ top: 50px;
+ left: 100px;
 }
 
+ul{
+  font-size: 30px;
+  
+}
+ul p{
+  text-align: left;
+  font-size: 15px;
+ 
+}
+.imagetext{
+  float: left;
+  border-radius: 20%;
+}
+#t1{
+  position: relative;
+  left: 30px;
+  top: 30px;
+  line-height: 30px;
+}
 
 /******************/
 /*   푸터 영역    */
 /******************/
 
 footer{   
+  position: relative;
+  top: 500px;
   width:1200px;   /* 너비 */
   height:100px;  /* 높이 */
   border-top:2px solid #222;
@@ -139,4 +146,4 @@ footer{
 #bottomMenu ul li a, #bottomMenu ul li a:visited {  
   font-size:15px;  /* 글자 크기 */ 
   color:#666;   /* 글자 색 */ 
-} 
+}
