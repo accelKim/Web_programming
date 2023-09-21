@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 구조 출력</title>
+    <script>
+        const p = document.querySelector("firstP");
+        
+    console.log('id = ${p.id}');
+    console.log('tagname = ${p.tagname}');
+    console.log('innerHTML = ${p.innerHTML}');
+    console.log('style = ${p.style.color}');
+    console.log('childElementCount = &{p.childElementCount}');
+    console.log('onclick = ${onclick}');
+
+ 
+    
+    function change(){
+        const span = document.querySelector("span");
+        span.style.fontSize = '30px';
+        span.style.border = "3px dotted magenta";
+        span.style.margin = "10px";
+        span.style.display = "block";
+        span.style.padding = "5px";
+    }
+    </script>
+</head>
+<body>
+    <h3>DOM 객체 p의 프로퍼티, 스타일,이벤트 리스너</h3>
+    <hr>
+    <p id="firstP"
+    style="color: blue; background-color: yellow;"
+    onclick="this.style.color = 'teal'">
+    이것은<span style="color: red;"> 처음 문장입니다
+    </span>
+</p>
+
+<p id="nextP"
+    style="color: blue; background-color: yellow;"
+    onclick="this.style.color = 'teal'">
+    이것은<span style="color: red;"> 다음 문장입니다
+    </span>
+</p>
+<input type="button" value="스타일변경" onclick="change()">
+<input type="button" value="스타일변경" onclick="change()">
+</body>
+</html>

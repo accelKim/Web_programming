@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('#event').on("mouseover", over)
+                       .on("mouseout", out);
+        });
+
+        function over(){
+            $('#event').css('background-color', 'red');
+        }
+
+        function out(){
+            $('#event').css('background-color', 'yellow');
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>이벤트 리스너</h3>
+    <hr>
+    <div id="event">
+        마우스를 올리면 색상이 변경됩니다.
+    </div>
+</body>
+</html>

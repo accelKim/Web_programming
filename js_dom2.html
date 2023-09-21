@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML 변경하기</title>
+    <script>
+        function change() {
+            const p = document.getElementById("firstP");
+            p.innerHTML = "<img src='image/bg5.jpg' width='400px' height='300px'>";
+        }
+    </script>
+</head>
+<body>
+    <h3>innerHTML 변경하기</h3>
+    <hr>
+    <p id="firstP" style="color: blue;" onclick="change()">
+        여기를
+        <span style="color: red;">
+            클릭하세요
+        </span>
+    </p>
+</body>
+</html>

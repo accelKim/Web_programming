@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+    <script>
+        function f(e) {
+            alert(`${e.type} + ${e.target} + ${e.currentTarget} + ${e.defaultPrevented}`);
+        }
+
+        function init() {
+            document.getElementById("div").addEventListener("mouseover", f);
+            document.getElementById("button").addEventListener("click", f);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>이벤트 객체</h3>
+    <hr>
+    <div id="div">마우스를 올려보세요</div>
+    <button id="button">클릭하세요</button>
+</body>
+</html>

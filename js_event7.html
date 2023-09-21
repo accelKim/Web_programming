@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function darwImage() {
+         let sel =  document.form.fruits;
+         let opt = sel.options;
+         let img = document.getElementById("img")
+        console.log(opt[sel.selectedIndex]);
+        img.src = opt[sel.selectedIndex].value
+        }
+    
+    </script>
+</head>
+<body>
+    <form action="" name="form">
+    <select name="fruits" onchange="darwImage()">
+        <option value="image/cup-1.jpg">컵1</option>
+        <option value="image/cup-2.jpg" selected>컵2</option>
+        <option value="image/cup-3.jpg">컵3</option>
+    </select>
+    <img id="img" src="image/cup-1.jpg" alt="">
+    </form>
+</body>
+</html>

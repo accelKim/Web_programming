@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var div;
+    function init(){
+     div = document.querySelector("#event");
+     div.addEventListener("mouseover", over);
+     div.addEventListener("mouseout", out)
+    }
+    function over(){
+        div.style.backgroundColor = "orchid";
+    }
+    function out(){
+        div.style.backgroundColor = "white";
+    }
+</script>
+</head>
+<body onload="init()">
+    <h3>이벤트 리스너</h3>
+    <hr>
+    <div id="event">
+        마우스를 올리면 색변경
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송정보입력</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<body>
+    <h3>배송정보입력</h3>
+    <hr>
+    주문자 정보
+    <form action="" id="myForm" method="post">
+        <input type="text" placeholder="이름" id="custName"> 
+        <input type="text" placeholder="전화번호" id="custPhone"> 
+        <input type="text" placeholder="주소" id="custAdd"> <br>
+    </form>
+    <hr>
+    <input type="checkbox" name="copy" id="copy" onclick="shipToBill();"> 주문자 정보와 같다면 체크해주세요
+    <hr>
+    배송지 정보
+    <div id="resever">
+        <input type="text" placeholder="이름" id="reseverName"> 
+        <input type="text" placeholder="전화번호" id="reseverPhone"> 
+        <input type="text" placeholder="주소" id="reseverAdd"> <br>
+    </div><br><br><br>
+    <form class="row g-3"></form>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">배송정보입력</button>
+  </div>
+</form>
+
+    <script>
+        function shipToBill(){
+            var custName = document.getElementById("custName").value;
+            var custPhone = document.getElementById("custPhone").value;
+            var custAdd = document.getElementById("custAdd").value;
+            
+            var reseverName = document.getElementById("reseverName");
+            var reseverPhone = document.getElementById("reseverPhone");
+            var reseverAdd = document.getElementById("reseverAdd");
+            
+            if(document.getElementById("copy").checked) {
+                reseverName.value = custName;
+                reseverPhone.value = custPhone;
+                reseverAdd.value = custAdd;
+
+                reseverName.disabled = true;
+                reseverPhone.disabled = true;
+                reseverAdd.disabled = true;
+            } else {
+                reseverName.value = "";
+                reseverPhone.value = "";
+                reseverAdd.value = "";
+
+                reseverName.disabled = false;
+                reseverPhone.disabled = false;
+                reseverAdd.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

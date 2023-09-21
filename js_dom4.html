@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러 DOM 객체 제어하기</title>
+    <script>
+    function createDiv(){
+           let newDiv = document.createElement("div");
+           let parent = document.getElementById("parent");
+            newDiv.style.backgroundColor = "yellow";
+            newDiv.setAttribute("id", "newDiv");
+            newDiv.innerText = "새로 생성된 DIV입니다.";
+            newDiv.onclick = function () {
+                let p = this.parentElement;
+                p.removeChild(this);
+            }
+
+            parent.appendChild(newDiv);
+    }
+      
+    
+</script>
+</head>
+<body id="parent">
+    <h3>여러 DOM 객체 제어하기</h3>
+    <hr>
+    <p>Dom 트리에 동적으로 객체를 삽입합니다.</p>
+    <a href="javascript:createDiv()">DIV 생성</a>
+  
+  
+
+</body>
+</html>

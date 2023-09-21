@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 활용하기</title>
+    <script>
+    function change(obj,color,size){
+        //  const span = document.querySelector("p");
+        obj.style.color = color;
+        obj.style.fontSize = size;
+    }
+</script>
+</head>
+<body>
+    <h3>this 변경하기</h3>
+    <hr>
+    <button onclick="change(this,'blue','20px')">버튼1</button>
+    <button onclick="change(this,'violet','30px')">버튼2</button>
+    <div onclick="change(this,'green','20px')">
+        여기를 클릭하면 크기와 색이 변경됩니다.
+    </div>
+  
+
+</body>
+</html>
